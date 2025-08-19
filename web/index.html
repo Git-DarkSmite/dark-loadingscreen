@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="popup-messages" class="popup-stack"></div>
+    <div id="video-container">
+    <div id="video-overlay"></div>
+    <div id="bg-video" class="yt-holder"></div>
+    <video id="local-video" class="hidden" playsinline preload="auto" loop></video>
+    </div>
+
+    <div class="content">
+        <h1 class="logo glow">Welcome</h1>
+        <div class="panel" id="staff-panel">
+            <h2 class="glow">Staff</h2>
+            <div id="staff-list"></div>
+        </div>
+        <div class="panel controls">
+            <div class="control-group">
+                <label for="playPause" class="glow small">Playback</label>
+                <button id="playPause" class="btn">Pause</button>
+            </div>
+            <div class="control-group">
+                <label for="volume" class="glow small">Volume</label>
+                <input type="range" id="volume" min="0" max="100" />
+            </div>
+            <div class="control-group">
+                <label class="glow small">Ljud</label>
+                <button id="muteToggle" class="btn">Mute</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-bar-wrapper">
+        <div class="loading-bar-bg">
+            <div class="loading-bar-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">Loading...</div>
+    </div>
+
+    <audio id="bg-music" preload="auto" loop autoplay playsinline></audio>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
